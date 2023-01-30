@@ -2,10 +2,22 @@ def calculatePay():
     # Implement your solution in between the two comment blocks
     print("calculating pay")
     # This first line is provided for you
-    hrs = float(input("Enter Hours: "))
-    rate = float(input('Enter Rate: '))
-    r = hrs*rate
-    print(r)
+    while True:
+        try:
+            hours = float(input("Enter Hours: "))
+            break
+        except:
+            print('Please only enter a numeric value.')
+            continue
+    while True:
+        try:
+            hourly_rate = float(input('Enter Rate: '))
+            break
+        except:
+            print('Please only enter a numberic value.')
+            continue
+    totalpay = hours*hourly_rate
+    print(totalpay)    
 
 
 
